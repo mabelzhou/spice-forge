@@ -176,7 +176,7 @@ router.post("/sign-up", async (req, res) => {
         })
         .then(msg => {
          console.log(msg); 
-         res.redirect("/general/welcome");
+         res.redirect("/welcome");
         })
         .catch(err => {
          console.log(err); 
