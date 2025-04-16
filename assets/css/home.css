@@ -1,0 +1,64 @@
+/* hero */
+.hero {
+    position: relative;
+    overflow: hidden;
+    font-size: 1.5em;
+    text-align: center;
+    max-height: 50rem;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.5));
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+    object-fit: center;
+    opacity: 0.5;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* Small devices*/
+@media (max-width: 575.98px) { 
+    .hero {
+      font-size: medium;
+    }
+  }
+
+#hero-btn {
+    font-size: 0.8em;
+}
+
+/* how it works cards */
+#how-it-works {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+/* meal cards */
+#meals {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ordernow-btn {
+    margin-left: auto;
+    margin-top: auto;
+}

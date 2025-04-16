@@ -1,0 +1,138 @@
+<h1>Edit Meal Kit</h1>
+<div class="d-flex justify-content-center">
+  <form
+    class="p-3 w-100"
+    method="post"
+    action="/mealkits/edit/<%= mealkit._id %>"
+    enctype="multipart/form-data"
+  >
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="name">Name of Kit</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Swedish Meatballs"
+        name="name"
+        value="<%= mealkit.name %>"
+      />
+    </div>
+
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="includes">Includes</label>
+      <input
+        type="text"
+        class="form-control"
+        id="includes"
+        placeholder="Meatballs, gravy, mashed potato, and a side of veggies."
+        name="includes"
+        value="<%= mealkit.includes %>"
+      />
+    </div>
+
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="description" class="form-label">Description</label>
+      <textarea
+        class="form-control"
+        id="description"
+        name="description"
+        rows="3"
+      >
+        <%= mealkit.description %></textarea
+      >
+    </div>
+
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="category">Category</label>
+      <input
+        type="text"
+        class="form-control"
+        id="category"
+        placeholder="Comfort Foods"
+        name="category"
+        value="<%= mealkit.category %>"
+      />
+    </div>
+
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="price">Price</label>
+      <input
+        type="number"
+        class="form-control"
+        id="price"
+        placeholder="10.99"
+        name="price"
+        min="0.01"
+        step="0.01"
+        value="<%= mealkit.price %>"
+      />
+    </div>
+
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="cookingTime">Time to Cook (in minutes)</label>
+      <input
+        type="number"
+        class="form-control"
+        id="cookingTime"
+        placeholder="40"
+        name="cookingTime"
+        min="1"
+        step="1"
+        value="<%= mealkit.cookingTime %>"
+      />
+    </div>
+
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="servings">Number of Servings</label>
+      <input
+        type="number"
+        class="form-control"
+        id="servings"
+        placeholder="2"
+        name="servings"
+        min="1"
+        step="1"
+        value="<%= mealkit.servings %>"
+      />
+    </div>
+
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="altText">Image Alt Text</label>
+      <input
+        type="text"
+        class="form-control"
+        id="altText"
+        placeholder="Photo of meatballs"
+        name="altText"
+        value="<%= mealkit.altText %>"
+      />
+    </div>
+
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="foodPic">Upload Photo</label>
+      <input type="file" class="form-control" id="foodPic" name="foodPic" />
+    </div>
+
+    <div class="p-2 col-12 col-md-6 col-lg-4 mx-auto form-group">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="featuredMealkit"
+        name="featuredMealkit"
+      />
+      <label class="form-check-label" for="featuredMealkit"
+        >Featured Meal</label
+      >
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <button
+        type="submit"
+        class="btn btn-primary col-12 col-md-auto my-5 mx-md-auto"
+        style="min-width: 200px"
+      >
+        Submit Changes
+      </button>
+    </div>
+  </form>
+</div>

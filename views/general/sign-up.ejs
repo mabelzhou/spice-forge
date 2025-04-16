@@ -1,0 +1,74 @@
+<h1>Sign Up Today</h1>
+<div class="d-flex justify-content-center">
+  <form class="p-3 w-100" method="post" action="/sign-up">
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="inputFirstName">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputFirstName"
+        placeholder="Enter first name"
+        name="inputFirstName"
+        value="<%= values.inputFirstName %>"
+      />
+
+      <% if (validationMessages?.inputFirstName) { %>
+      <span style="color: red"><%= validationMessages?.inputFirstName %></span>
+      <% } %>
+    </div>
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="inputLastName">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputLastName"
+        placeholder="Enter last name"
+        name="inputLastName"
+        value="<%= values.inputLastName %>"
+      />
+      <% if (validationMessages?.inputLastName) { %>
+      <span style="color: red"><%= validationMessages?.inputLastName %></span>
+      <% } %>
+    </div>
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="inputEmail">Email address</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputEmail"
+        aria-describedby="emailHelp"
+        placeholder="example@email.com"
+        name="inputEmail"
+        value="<%= values.inputEmail %>"
+      />
+      <% if (validationMessages?.inputEmail) { %>
+      <span style="color: red"><%= validationMessages?.inputEmail %></span>
+      <% } %>
+    </div>
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="inputPassword">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="inputPassword"
+        placeholder="********"
+        name="inputPassword"
+        value="<%= values.inputPassword %>"
+      />
+      <% if (validationMessages?.inputPassword &&
+      validationMessages?.inputPassword.length > 0) { %> <%
+      validationMessages?.inputPassword.forEach(function(message) { %>
+      <span style="color: red"><%= message %></span><br />
+      <% }); %> <% } %>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button
+        type="submit"
+        class="btn btn-primary col-12 col-md-auto my-5 mx-md-auto"
+        style="min-width: 200px"
+      >
+        Sign Up
+      </button>
+    </div>
+  </form>
+</div>

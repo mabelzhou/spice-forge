@@ -1,0 +1,26 @@
+<div class="card" style="width: 18rem; height: 30rem">
+  <img
+    src="<%- mealkit.imageUrl %>"
+    class="card-img-top"
+    alt="<%= mealkit.altText %>"
+    style="height: 220px; object-fit: cover; width: 100%"
+  />
+  <div class="card-body">
+    <h5 class="card-title"><%= mealkit.name %></h5>
+    <p class="card-text"><%= mealkit.description %></p>
+    <div class="row">
+      <div class="col-6">
+        <i class="bi bi-clock-fill"></i>
+        <span><%= mealkit.cookingTime %> min</span>
+      </div>
+      <div class="col-6">
+        <i class="bi bi-person-fill"></i>
+        <span><%= mealkit.servings %> servings</span>
+      </div>
+    </div>
+    <div class="text-center m-3">
+      <a href="/mealkits/edit/<%= mealkit._id %>" class="link-btn2">Edit</a>
+      <a href="/mealkits/remove/<%= mealkit._id %>" class="link-btn1">Delete</a>
+    </div>
+  </div>
+</div>

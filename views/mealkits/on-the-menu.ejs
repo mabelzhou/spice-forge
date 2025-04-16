@@ -1,0 +1,13 @@
+<h1>Featured</h1>
+<div class="meals-container">
+  <% for(let mealkit of featuredMeals) { %> <%-
+  include("../partials/mealkit.ejs", {mealkit: mealkit}) %> <% } %>
+</div>
+
+<% mealCategories.forEach(category => { %>
+<h1><%= category.categoryName %></h1>
+<div class="meals-container">
+  <% category.mealKits.forEach(mealkit => { %> <%-
+  include("../partials/mealkit.ejs", {mealkit: mealkit}) %> <% }) %>
+</div>
+<% }) %>

@@ -1,0 +1,70 @@
+<h1>Log In</h1>
+<div class="d-flex justify-content-center">
+  <form class="p-3 w-100" method="post" action="/log-in">
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <div class="toggle-container">
+        <div class="tabs">
+          <input
+            type="radio"
+            id="radio-clerk"
+            name="role"
+            value="clerk"
+            checked
+          />
+          <label class="tab" for="radio-clerk">Data Entry Clerk</label>
+
+          <input
+            type="radio"
+            id="radio-customer"
+            name="role"
+            value="customer"
+          />
+          <label class="tab" for="radio-customer">Customer</label>
+
+          <span class="glider"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="inputEmail">Email address</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputEmail"
+        aria-describedby="emailHelp"
+        placeholder="example@email.com"
+        name="inputEmail"
+        value="<%= values?.inputEmail %>"
+      />
+    </div>
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <label for="inputPassword">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="inputPassword"
+        placeholder="********"
+        name="inputPassword"
+        value="<%= values?.inputPassword %>"
+      />
+    </div>
+
+    <div class="form-group p-2 col-12 col-md-6 col-lg-4 mx-auto">
+      <% if (typeof errors !== "undefined" && errors.length > 0) { %> <%
+      errors.forEach(err => { %>
+      <p style="color: red"><%= err %></p>
+      <% }) %> <% } %>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <button
+        type="submit"
+        class="btn btn-primary col-12 col-md-auto my-5 mx-md-auto"
+        style="min-width: 200px"
+      >
+        Sign In
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="/css/home.css" />
+
+<!--https://unsplash.com/photos/three-bowls-of-salad-dish-with-lemon-on-table-rD3YrnhTmf0-->
+<div class="hero">
+  <img src="\images\hero2.jpg" alt="Top down photo of prepared meals" />
+  <div class="hero-text">
+    <h1>Join Us</h1>
+    <p>Make healthy, tasty meals at home with our easy to follow recipes.</p>
+    <a href="/sign-up" class="link-btn2" id="hero-btn">Order Now</a>
+  </div>
+</div>
+
+<section id="how-it-works">
+  <h1>How it Works</h1>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card border-0" style="min-height: 400px">
+          <img
+            src="/images/tilapia.jpg"
+            class="card-img-top"
+            alt="Photo of salmon stew recipe in a cast iron pan"
+            style="height: 200px; object-fit: cover; width: 100%"
+          />
+          <div class="card-body">
+            <h5 class="card-title">You choose</h5>
+            <p class="card-text">
+              Choose from our weekly menu of delicious meals. We have a variety
+              of options to suit your dietary needs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0" style="min-height: 400px">
+          <img
+            src="/images/how2.jpg"
+            class="card-img-top"
+            alt="Photo of a man on a bicycle making a delivery"
+            style="height: 200px; object-fit: cover; width: 100%"
+          />
+          <div class="card-body">
+            <h5 class="card-title">We deliver</h5>
+            <p class="card-text">
+              We deliver your box of fresh ingredients and recipes straight to
+              your door.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-0" style="min-height: 400px">
+          <img
+            src="/images/how3.jpg"
+            class="card-img-top"
+            alt="Photo of person slicing produce"
+            style="height: 200px; object-fit: cover; width: 100%"
+          />
+          <div class="card-body">
+            <h5 class="card-title">You cook</h5>
+            <p class="card-text">
+              Follow our easy to follow recipes and cook delicious meals in 30
+              minutes or less.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="meals">
+  <h1>This Week's Menu</h1>
+  <div class="meals-container">
+    <% for(let mealkit of featuredMeals) { %> <%-
+    include("../partials/mealkit.ejs", {mealkit: mealkit, role: role}) %> <% }
+    %>
+  </div>
+</section>
